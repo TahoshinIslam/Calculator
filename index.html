@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish Modal Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="openModal" class="open-btn">Open Stylish Calculator</button>
+
+  <div id="calculatorModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content glass" role="dialog" aria-modal="true" aria-labelledby="calc-title">
+      <header class="modal-header">
+        <h2 id="calc-title">Calculator</h2>
+        <button id="closeModal" class="close-btn" aria-label="Close">&times;</button>
+      </header>
+
+      <input type="text" id="display" readonly aria-live="polite" />
+      <div class="buttons">
+        <button class="key" onclick="appendNumber('7')">7</button>
+        <button class="key" onclick="appendNumber('8')">8</button>
+        <button class="key" onclick="appendNumber('9')">9</button>
+        <button class="key op" onclick="setOperation('/')">÷</button>
+        <button class="key" onclick="appendNumber('4')">4</button>
+        <button class="key" onclick="appendNumber('5')">5</button>
+        <button class="key" onclick="appendNumber('6')">6</button>
+        <button class="key op" onclick="setOperation('*')">×</button>
+        <button class="key" onclick="appendNumber('1')">1</button>
+        <button class="key" onclick="appendNumber('2')">2</button>
+        <button class="key" onclick="appendNumber('3')">3</button>
+        <button class="key op" onclick="setOperation('-')">−</button>
+        <button class="key zero" onclick="appendNumber('0')">0</button>
+        <button class="key" onclick="appendNumber('.')">.</button>
+        <button class="key eq" onclick="calculate()">=</button>
+        <button class="key op" onclick="setOperation('+')">+</button>
+        <button class="key danger" onclick="clearDisplay()">C</button>
+      </div>
+      <footer class="modal-footer">
+        <small>Hover / click for effects • Keyboard coming soon</small>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
