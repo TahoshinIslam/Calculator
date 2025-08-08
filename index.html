@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,28 +18,32 @@
         <button id="closeModal" class="close-btn" aria-label="Close">&times;</button>
       </header>
 
-      <input type="text" id="display" readonly aria-live="polite" />
-      <div class="buttons">
-        <button class="key" onclick="appendNumber('7')">7</button>
-        <button class="key" onclick="appendNumber('8')">8</button>
-        <button class="key" onclick="appendNumber('9')">9</button>
-        <button class="key op" onclick="setOperation('/')">÷</button>
-        <button class="key" onclick="appendNumber('4')">4</button>
-        <button class="key" onclick="appendNumber('5')">5</button>
-        <button class="key" onclick="appendNumber('6')">6</button>
-        <button class="key op" onclick="setOperation('*')">×</button>
-        <button class="key" onclick="appendNumber('1')">1</button>
-        <button class="key" onclick="appendNumber('2')">2</button>
-        <button class="key" onclick="appendNumber('3')">3</button>
-        <button class="key op" onclick="setOperation('-')">−</button>
-        <button class="key zero" onclick="appendNumber('0')">0</button>
-        <button class="key" onclick="appendNumber('.')">.</button>
-        <button class="key eq" onclick="calculate()">=</button>
-        <button class="key op" onclick="setOperation('+')">+</button>
-        <button class="key danger" onclick="clearDisplay()">C</button>
+      <div class="display-wrap">
+        <div id="expr" class="expr">&nbsp;</div>
+        <input type="text" id="display" readonly aria-live="polite" />
+      </div>
+
+      <div class="buttons" id="keys">
+        <button class="key" data-k="7">7</button>
+        <button class="key" data-k="8">8</button>
+        <button class="key" data-k="9">9</button>
+        <button class="key op" data-k="/">÷</button>
+        <button class="key" data-k="4">4</button>
+        <button class="key" data-k="5">5</button>
+        <button class="key" data-k="6">6</button>
+        <button class="key op" data-k="*">×</button>
+        <button class="key" data-k="1">1</button>
+        <button class="key" data-k="2">2</button>
+        <button class="key" data-k="3">3</button>
+        <button class="key op" data-k="-">−</button>
+        <button class="key zero" data-k="0">0</button>
+        <button class="key" data-k=".">.</button>
+        <button class="key eq" data-k="=">=</button>
+        <button class="key op" data-k="+">+</button>
+        <button class="key danger" data-k="C">C</button>
       </div>
       <footer class="modal-footer">
-        <small>Hover / click for effects • Keyboard coming soon</small>
+        <small>I can press or click the Keyboard and mouse  Enter = result, Backspace delete, C clear, Esc close</small>
       </footer>
     </div>
   </div>
